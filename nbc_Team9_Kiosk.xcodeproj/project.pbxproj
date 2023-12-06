@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1B63F1AA2B20632200674C09 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B63F1A92B20632200674C09 /* main.swift */; };
+		1B63F1B12B2063C800674C09 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B63F1B02B2063C800674C09 /* Menu.swift */; };
+		1B63F1B32B2063D500674C09 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B63F1B22B2063D500674C09 /* Cart.swift */; };
+		1B63F1B52B2063DE00674C09 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B63F1B42B2063DE00674C09 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		1B63F1A62B20632200674C09 /* nbc_Team9_Kiosk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nbc_Team9_Kiosk; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B63F1A92B20632200674C09 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1B63F1B02B2063C800674C09 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		1B63F1B22B2063D500674C09 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		1B63F1B42B2063DE00674C09 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				1B63F1A92B20632200674C09 /* main.swift */,
+				1B63F1B02B2063C800674C09 /* Menu.swift */,
+				1B63F1B22B2063D500674C09 /* Cart.swift */,
+				1B63F1B42B2063DE00674C09 /* Order.swift */,
 			);
 			path = nbc_Team9_Kiosk;
 			sourceTree = "<group>";
@@ -120,6 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B63F1B12B2063C800674C09 /* Menu.swift in Sources */,
+				1B63F1B32B2063D500674C09 /* Cart.swift in Sources */,
+				1B63F1B52B2063DE00674C09 /* Order.swift in Sources */,
 				1B63F1AA2B20632200674C09 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
