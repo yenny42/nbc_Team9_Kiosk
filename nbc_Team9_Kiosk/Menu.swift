@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class Menu {
+
+    // 세부 메뉴를 보여주고 선택한 데이터를 장바구니에 넘겨줍니다
+}
