@@ -11,8 +11,29 @@
 
 ### 🌱 9팀 팀원
 
+
+- [유창선](https://github.com/ycs9608)   
+  ----
+  #### Main 클래스
+<br/><br/>
+
 - [최예은](https://github.com/yenny42)    
-- [유창선](https://github.com/ycs9608)  
+  ----
+  #### Menu 클래스
+  - Burgers, FrozenCustard, Drinks, Beer 데이터를 저장
+  - Main 클래스에서 입력한 값을 받아와서 저장
+   - Main 클래스에서 입력받은 값을 바탕으로 <br/>Burgers, FrozenCustard, Drinks, Beer 중 어떤 메뉴를 보여줄 지 분기
+  - 선택한 세부 메뉴를 Cart에 넘겨주기
+<br/><br/>
+
 - [배병철](https://github.com/baerongmerong)  
-- [윤규호](https://github.com/ykyohub)  
+  ----
+  #### Cart 클래스
+<br/><br/>
+
+- [윤규호](https://github.com/ykyohub)   
+  ----
+  #### Order 클래스
+<br/><br/>
+
 
