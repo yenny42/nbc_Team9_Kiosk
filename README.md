@@ -15,6 +15,10 @@
 - [유창선](https://github.com/ycs9608)   
   ----
   #### Main 클래스
+  - 번호를 선택 Menu 클래스(showDetailMenu) 메소드 처리, 상세 정보, 해당메뉴를 Cart에 추가하는 역할
+  - 5번 입력하면 Cart 내용을 확인 주문 진행, Order 클래스의 order 메소드는 장바구니의 총 가격을 받아 주문 처리
+  - 6번 입력하면 Cart의 상품을 제거하고 주문 취소 메시지가 프린트, Cart는 비워진다
+  - 0번 입력하면 프로그램은 종료
 <br/><br/>
 
 - [최예은](https://github.com/yenny42)    
