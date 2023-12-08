@@ -8,6 +8,7 @@
 import Foundation
 
 class Main {
+    let order = Order()
     let cart = Cart()
     
     func kiosk() {
@@ -18,6 +19,12 @@ class Main {
             print("3. Drinks          | 매장에서 직접 만드는 음료")
             print("4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주")
             print("0. 종료             | 프로그램 종료")
+            if(cart.checkCart){
+                print("\n5. [ ORDER MENU]")
+                print("5. Order     | 장바구니를 확인 후 주문합니다.")
+                print("6. Cancel    | 진행중인 주문을 취소합니다.")
+            }
+            
             if let input = readLine() {
                 switch input {
                     case "1",
@@ -27,10 +34,12 @@ class Main {
                         let menu = Menu(cart: cart)
                         menu.showDetailMenu(mainInstance: self, input)
                 case "5":
-                    cart.displayCart()
-//                case "6":
-//                    TODO: main에서는 product 프로퍼티로 보낼 수 있는 값이 없습니다ㅠㅠ
-//                    cart.removeProduct(product: ??)
+                    if(cart.checkCart){
+                        cart.displayCart()
+                        order.order(cart.TotalPrice())
+                    }else{
+                        print("잘못된 입력입니다. 다시 입력해주세요.")
+                    }
                 case "0":
                     print("프로그램을 종료합니다")
                     exit(0)

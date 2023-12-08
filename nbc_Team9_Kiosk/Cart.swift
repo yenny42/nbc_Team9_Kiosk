@@ -12,10 +12,12 @@
 
 
 class Cart {
+    var checkCart: Bool = false
     var products: [MenuItem] = []
     
     func addProduct(product: MenuItem) {
         products.append(product)
+        checkCart = true
         print("\(product.name)이 장바구니에 추가되었습니다.")
     }
     
