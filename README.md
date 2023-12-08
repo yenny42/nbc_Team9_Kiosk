@@ -29,6 +29,9 @@
 - [배병철](https://github.com/baerongmerong)  
   ----
   #### Cart 클래스
+  - 선택한 메뉴 데이터를 장바구니에 [추가/제거] 기능 (최예은님, 윤규호님 도움)
+  - 장바구니 목록 출력{displayCart} 및 장바구니에 담겨있는 상품들 Total 값 보여주기 {TotalPrice}
+  - 주문을 위한 데이터 [주문]에 넘겨주기 - (윤규호님 도움)
 <br/><br/>
 
 - [윤규호](https://github.com/ykyohub)   
