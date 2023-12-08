@@ -46,6 +46,8 @@ struct MenuItem {
 }
 
 class Menu {
+    let cart = Cart()
+    
     let burgers = Burgers()
     let frozenCustard = FrozenCustard()
     let drinks = Drinks()
@@ -91,6 +93,29 @@ class Menu {
         print("0. 돌아가기")
     }
     
+    func checkSendCart(mainInstance: Main, sendCartData: MenuItem) {
+        print("""
+        \(sendCartData.name) 상품을 장바구니에 넣으시겠습니까?
+        
+        1. 확인    2. 취소
+        """)
+        getInput()
+        
+        func getInput(){
+            if let input = readLine() {
+                switch input {
+                case "1":
+                    cart.addProduct(product: sendCartData)
+                case "2":
+                    mainInstance.kiosk()
+                default:
+                    print("다시 입력해주세요")
+                    getInput()
+                }
+            }
+        }
+    }
+    
     
     func showDetailMenu(mainInstance: Main, _ input: String) {
         mainInput.append(input)
@@ -102,12 +127,8 @@ class Menu {
                 switch input {
                 case "1" ... "\(menuListCount)":
                     let sendCartData = MenuItem(name: menuListArr[index].name, price: menuListArr[index].price, info: menuListArr[index].info)
-                    print("장바구니에 보낼 데이터")
-                    print(sendCartData)
                     
-                    // TODO: 장바구니에 데이터 보내는 코드 추가하기
-                    print("Main 클래스로 돌아갑니다")
-                    // 현재는 Main 클래스로 돌아감
+                    checkSendCart(mainInstance: mainInstance, sendCartData: sendCartData)
                 case "0":
                     print("Main 클래스로 돌아갑니다")
                      mainInstance.kiosk()
