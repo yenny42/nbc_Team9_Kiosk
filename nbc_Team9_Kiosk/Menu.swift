@@ -7,38 +7,6 @@
 
 import Foundation
 
-/*
- 사용했던 테스트용 Main 클래스
- 
- class Main {
-     func kiosk() {
-         
-         print("Welcome!")
-         
-         while true {
-             print("Main menu options")
-             print("0. 프로그램 종료")
-             
-             if let input = readLine() {
-                 switch input {
-                 case "1",
-                     "2",
-                     "3",
-                     "4":
-                     let menu = Menu()
-                     menu.showDetailMenu(mainInstance: self, input)
-                 case "0":
-                     print("프로그램을 종료합니다")
-                     exit(0)
-                 default:
-                     print("다시 입력해주세요 Main")
-                 }
-             }
-         }
-     }
- }
- */
-
 struct MenuItem {
     var name: String
     var price: Double
@@ -46,8 +14,8 @@ struct MenuItem {
 }
 
 class Menu {
-    let cart = Cart()
-    
+    let cart: Cart
+
     let burgers = Burgers()
     let frozenCustard = FrozenCustard()
     let drinks = Drinks()
@@ -80,6 +48,10 @@ class Menu {
                 menuListCount = beer.count
             }
         }
+    }
+    
+    init(cart: Cart) {
+        self.cart = cart
     }
     
     private func printMenu() {

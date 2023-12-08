@@ -25,7 +25,7 @@ class Cart {
         } else {
             print("장바구니에 해당 상품이 없습니다.")
         }
-                                             }
+    }
                                              
     func TotalPrice() -> Double {
             let totalPrice = products.reduce(0) { $0 + $1.price}
