@@ -19,6 +19,17 @@ class Order {
             print("\(totalPrice)\n")
             print("1. 주문       2. 메뉴판")
             
+            if let input = readLine() {
+                switch input {
+                case "1":
+                    print("주문을 성공했습니다.")
+                case "2":
+                    print("이전 메뉴로 돌아갑니다.")
+                    break
+                default:
+                    print("다시 입력해주세요")
+                }
+            }
         }else{
             print("현재 잔액은 \(myWallet)W 으로 \(totalPrice-myWallet)W 이 부족해서 주문할 수 없습니다.")
         }
