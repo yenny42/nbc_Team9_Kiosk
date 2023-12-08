@@ -8,6 +8,8 @@
 import Foundation
 
 class Main {
+    let cart = Cart()
+    
     func kiosk() {
         while true {
             print("[ SHAKESHACK MENU ]")
@@ -18,18 +20,17 @@ class Main {
             print("0. 종료             | 프로그램 종료")
             if let input = readLine() {
                 switch input {
-                case "1":
-                    let burgerMenu = BurgerMenu()
-                    burgerMenu.showSubMenu()
-                case "2":
-                    let custardMenu = FrozenCustardMenu()
-                    custardMenu.showSubMenu()
-                case "3":
-                    let drinksMenu = DrinksMenu()
-                    drinksMenu.showSubMenu()
-                case "4":
-                    let beerMenu = BeerMenu()
-                    beerMenu.showSubMenu()
+                    case "1",
+                    "2",
+                    "3",
+                    "4":
+                        let menu = Menu(cart: cart)
+                        menu.showDetailMenu(mainInstance: self, input)
+                case "5":
+                    cart.displayCart()
+//                case "6":
+//                    TODO: main에서는 product 프로퍼티로 보낼 수 있는 값이 없습니다ㅠㅠ
+//                    cart.removeProduct(product: ??)
                 case "0":
                     print("프로그램을 종료합니다")
                     exit(0)
@@ -40,3 +41,6 @@ class Main {
         }
     }
 }
+
+let main = Main()
+main.kiosk()
