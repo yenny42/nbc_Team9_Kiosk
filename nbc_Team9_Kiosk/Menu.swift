@@ -55,7 +55,6 @@ class Menu {
     }
     
     private func printMenu() {
-        print("Welcome! Menu Class")
         print(" [ \(menuListName) ] ")
         
         for (i, option) in menuListArr.enumerated() {
