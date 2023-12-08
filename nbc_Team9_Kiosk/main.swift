@@ -8,7 +8,7 @@
 import Foundation
 
 class Main {
-    let order = Order()
+    //let order = Order()
     let cart = Cart()
     
     func kiosk() {
@@ -20,7 +20,7 @@ class Main {
             print("4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주")
             print("0. 종료             | 프로그램 종료")
             if(cart.checkCart){
-                print("\n5. [ ORDER MENU]")
+                print("\n[ ORDER MENU]")
                 print("5. Order     | 장바구니를 확인 후 주문합니다.")
                 print("6. Cancel    | 진행중인 주문을 취소합니다.")
             }
@@ -36,8 +36,16 @@ class Main {
                 case "5":
                     if(cart.checkCart){
                         cart.displayCart()
-                        order.order(cart.TotalPrice())
+                        //order.order(cart.TotalPrice())
                     }else{
+                        print("잘못된 입력입니다. 다시 입력해주세요.")
+                    }
+                case "6":
+                    if cart.checkCart {
+                    // 주문 취소 로직 추가
+                    cart.removeCart()
+                        print("주문이 취소되었습니다. 장바구니가 비워졌습니다.")
+                    } else {
                         print("잘못된 입력입니다. 다시 입력해주세요.")
                     }
                 case "0":

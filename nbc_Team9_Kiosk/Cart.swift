@@ -12,6 +12,8 @@
 
 
 class Cart {
+    let order = Order()
+    
     var checkCart: Bool = false
     var products: [MenuItem] = []
     
@@ -19,6 +21,11 @@ class Cart {
         products.append(product)
         checkCart = true
         print("\(product.name)이 장바구니에 추가되었습니다.")
+    }
+    
+    func removeCart(){
+        checkCart = false
+        products = []
     }
     
     func removeProduct(product: MenuItem) {
@@ -41,5 +48,6 @@ class Cart {
             }
             let totalPrice = TotalPrice()
             print("총 가격: \(totalPrice)원")
+            order.order(totalPrice, cartInstance: self)
         }
 }
