@@ -34,6 +34,9 @@
 - [윤규호](https://github.com/ykyohub)   
   ----
   #### Order 클래스
+  - Cart 클래스에서 받아온 장바구니 목록 주문
+  - 장바구니 목록의 총액(totalPrice)과 내 잔액(myWallet) 비교 후 주문, 잔액 업데이트
+  - 잔액 부족시 예외처리
 <br/><br/>
 
 
